@@ -7,7 +7,7 @@
         <button class="btn btn--add-todo" type="button" @click="addTodo">Добавить</button>
       </div>
     </form>
-    <ToDoList
+    <TodoList
       @remove-todo="removeTodo"
       @complete="setCompleted" :todos="todos"
     />
@@ -20,7 +20,8 @@
 </template>
 <script setup>
 import { computed, reactive, ref } from 'vue'
-import ToDoList from './components/ToDoList.vue'
+import TodoList from './components/TodoList.vue'
+
 
 const inputText = ref('')
 
